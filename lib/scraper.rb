@@ -35,7 +35,7 @@ class Scraper
 
 end
 
-scrape = Scraper.new
-doc = scrape.get_page('http://learn-co-curriculum.github.io/site-for-scraping/courses')
-courses = scrape.get_courses(doc)
-puts scrape.make_courses(courses)
+#scrape = Scraper.new
+#doc = scrape.get_page('http://learn-co-curriculum.github.io/site-for-scraping/courses')
+#courses = scrape.get_courses(doc)
+#puts scrape.make_courses(courses)
