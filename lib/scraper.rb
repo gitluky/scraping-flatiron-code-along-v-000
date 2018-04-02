@@ -4,8 +4,16 @@ require 'open-uri'
 require_relative './course.rb'
 
 class Scraper
-  
-    def print_courses
+
+  def get_page(url)
+    Nokogiri::HTML(open(url)).tap {|doc| doc}
+  end
+
+  def get_courses(doc)
+    courses = doc.css(".post same-height-right")
+  end
+
+  def print_courses
     self.make_courses
     Course.all.each do |course|
       if course.title
@@ -15,8 +23,9 @@ class Scraper
       end
     end
   end
-  
+
 end
 
-
-
+scrape = Scraper.new
+doc = scrape.get_page('http://learn-co-curriculum.github.io/site-for-scraping/courses')
+puts scrape.get_courses(doc)
