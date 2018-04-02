@@ -39,4 +39,4 @@ end
 #doc = scrape.get_page('http://learn-co-curriculum.github.io/site-for-scraping/courses')
 #courses = scrape.get_courses(doc)
 #puts scrape.make_courses(courses)
-Scaper.new.print_courses
+Scraper.new.print_courses
