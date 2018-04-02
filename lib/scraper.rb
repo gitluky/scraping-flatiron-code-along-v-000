@@ -10,8 +10,7 @@ class Scraper
   end
 
   def get_courses(doc)
-    courses = doc.css(".post same-height-right")
-    courses
+    doc.css(".post same-height-right")
   end
 
   def print_courses
