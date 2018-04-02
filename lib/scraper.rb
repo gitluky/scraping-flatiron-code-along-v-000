@@ -13,8 +13,11 @@ class Scraper
     doc.css(".post")
   end
 
-  def make_courses(courses)
-
+  def make_courses(posts)
+    posts.each do |post|
+      course = Course.new
+      course.title = post.css('h2').text
+    end
   end
 
   def print_courses
