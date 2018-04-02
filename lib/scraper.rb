@@ -9,8 +9,8 @@ class Scraper
     Nokogiri::HTML(open(url)).tap {|doc| doc}
   end
 
-  def get_courses(doc)
-    doc.css(".post")
+  def get_courses
+    self.get_page.css('.post')
   end
 
   def make_courses(posts)
